@@ -46,7 +46,7 @@ const Pointer = () => {
                     </div>
                 ))}
             </div>
-            <p className='md:w-[1158px] w-full m-auto md:text-[40px] text-[28px] font-bold text-center uppercase mt-[100px] mb-10'>ЗАБРОНИРУЙТЕ Автомобиль СЕГОДНЯ И ПОЛУЧИТЕ ДОПОЛНИТЕЛЬНУЮ ВЫГОДУ 100 000 ₽</p>
+            <p className='md:w-[1158px] w-full m-auto md:text-[40px] text-[28px] font-bold text-center uppercase md:mt-[100px] mt-[60px] mb-10'>ЗАБРОНИРУЙТЕ Автомобиль СЕГОДНЯ И ПОЛУЧИТЕ ДОПОЛНИТЕЛЬНУЮ ВЫГОДУ 100 000 ₽</p>
             <div className='flex justify-center gap-6 mb-[60px]'>
                 <div className='flex flex-col items-center'>
                     <img className='w-[140px] md:w-[196px]' src={red} alt="rasm" />
