@@ -37,7 +37,7 @@ const Equipment = () => {
                         <p className='text-[18px] text-text-gray md:mb-8 mb-6'>2.0 л. Бензин, Полный, Автоматическая</p>
                         <p className='text-[24px] font-bold line-through'>3 649 000 ₽</p>
                         <div className='md:flex gap-6 mt-6 mb-10 md:mb-0'>
-                            <div className='flex items-start gap-[10px]'>
+                            <div className='flex items-start gap-[10px] mb-3 md:mb-0'>
                                 <img src={tag} alt="" />
                                 <p>Выгода по Trade-in до 450 000 ₽ </p>
                             </div>
