@@ -5,7 +5,7 @@ import arrow from '../assets/arrow.png'
 const SecondaryHero = () => {
   return (
     <div className='relative'>
-      <img className='h-[520px] object-cover object-left' src={hero} alt="" />
+      <img className='h-[520px] md:h-[400px] object-cover object-left' src={hero} alt="" />
       <div className="container">
         <div className='absolute top-10'>
             <p className='text-[40px] font-bold w-[354px] leading-[40px]'>Оставьте заявку на кредит</p>

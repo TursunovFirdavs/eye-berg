@@ -1,5 +1,6 @@
 import './App.css';
 import CarInfo from './components/Car-info';
+import Client from './components/Client';
 import Equipment from './components/Equipment';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
@@ -15,6 +16,7 @@ function App() {
       <CarInfo/>
       <Equipment/>
       <SecondaryHero/>
+      <Client/>
     </div>
   );
 }
