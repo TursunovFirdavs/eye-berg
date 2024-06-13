@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Pointer from './components/Pointer';
 import SecondaryHero from './components/Secondary-hero';
+import Map from './components/Map';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Equipment/>
       <SecondaryHero/>
       <Client/>
+      <Map/>
     </div>
   );
 }
