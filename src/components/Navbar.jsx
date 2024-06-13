@@ -9,10 +9,12 @@ import speedometer from '../assets/speedometer.png'
 import settings from '../assets/settings.png'
 import Menu from './Menu'
 import { IoClose } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom'
 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
 
   return (
     <div className='container flex items-center md:gap-8 gap-2'>
@@ -54,7 +56,7 @@ const Navbar = () => {
               <p className='text-[20px] font-semibold'>+7 (999) 999-99-99</p>
               <img src={image} alt="rasm" />
             </div>
-            <div className='bg-main-yellow px-[30px] py-[11px] flex items-center gap-2 text-black rounded-[8px]'>
+            <div onClick={() => navigate('/offer')} className='bg-main-yellow px-[30px] py-[11px] flex items-center gap-2 text-black cursor-pointer rounded-[8px]'>
               <img src={phone} alt="rasm" />
               <p className='text-[14px] font-semibold'>Заказать звонок</p>
             </div>

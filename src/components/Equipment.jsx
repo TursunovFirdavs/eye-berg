@@ -5,10 +5,12 @@ import gift from '../assets/gift.png'
 import arrow from '../assets/arrow.png'
 import { IoIosArrowForward } from "react-icons/io";
 import newCar from '../assets/new.png'
+import { useNavigate } from 'react-router-dom'
 
 
 const Equipment = () => {
     const data = [1,2,3]
+    const navigate = useNavigate()
     return (
         <div className='container pb-[80px]'>
             <p className='text-center md:text-[40px] text-[28px] font-bold md:mt-[100px] mt-[80px] mb-10'>ПОДБЕРИТЕ КОМПЛЕКТАЦИЮ</p>
@@ -46,11 +48,11 @@ const Equipment = () => {
                         </div>
                     </div>
                     <div className='h-[136px]'>
-                        <div key={item} className=' md:w-[320px] w-full bg-main-yellow text-main-dark text-[14px] font-semibold flex items-center justify-center gap-2 py-4 rounded-[8px]'>
+                        <div onClick={() => navigate('/offer')} key={item} className=' md:w-[320px] cursor-pointer w-full bg-main-yellow text-main-dark text-[14px] font-semibold flex items-center justify-center gap-2 py-4 rounded-[8px]'>
                             <p>Получить предложение</p>
                             <img src={arrow} alt="" />
                         </div>
-                        <div className=' md:w-[320px] w-full border border-main-yellow text-[14px] font-semibold mt-3 flex items-center justify-center gap-2 py-4 rounded-[8px]'>
+                        <div className=' md:w-[320px] w-full border border-main-yellow cursor-pointer text-[14px] font-semibold mt-3 flex items-center justify-center gap-2 py-4 rounded-[8px]'>
                             <p>Тест-драйв</p>
                             <IoIosArrowForward className='mt-1'/>
                         </div>
@@ -65,7 +67,7 @@ const Equipment = () => {
                 <img src={newCar} alt="" />
                 <div>
                     <p className='font-bold md:text-[40px] text-[28px] md:leading-[40px] leading-[30px] mt-5 md:mt-0 md:mb-10 mb-5'>ОБМЕН ПО TRADE-IN НА ВЫГОДНЫХ УСЛОВИЯХ</p>
-                    <div className='bg-main-yellow rounded-[8px] md:w-[207px] py-4 flex items-center gap-2 justify-center text-main-dark font-semibold'>
+                    <div onClick={() => navigate('/offer')} className='bg-main-yellow cursor-pointer rounded-[8px] md:w-[207px] py-4 flex items-center gap-2 justify-center text-main-dark font-semibold'>
                         <p>Отправить заявку</p>
                         <img className='mt-1' src={arrow} alt="" />
                     </div>

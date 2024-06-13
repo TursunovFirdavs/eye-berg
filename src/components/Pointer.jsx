@@ -6,8 +6,10 @@ import note from '../assets/note.png'
 import timer from '../assets/timer.png'
 import red from '../assets/red.png'
 import white from '../assets/white.png'
+import { useNavigate } from 'react-router-dom'
 
 const Pointer = () => {
+    const navigation = useNavigate()
     const data = [
         {
             img: medal,
@@ -30,7 +32,7 @@ const Pointer = () => {
             <div className='bg-secondary-dark md:flex items-center justify-between rounded-[10px] md:px-10 px-4 py-5 mt-5 mb-[60px]'>
                 <p className='w-[318px] md:text-[30px] text-[28px] font-bold leading-[30px]'>Срок действия спецпредложения:</p>
                 <img className='my-6 md:my-0' src={day} alt="rasm" />
-                <div className='bg-main-yellow pb-[18px] pt-[14px] rounded-[8px] md:w-[248px] flex gap-2 items-center justify-center'>
+                <div onClick={() => navigation('/offer')} className='bg-main-yellow cursor-pointer pb-[18px] pt-[14px] rounded-[8px] md:w-[248px] flex gap-2 items-center justify-center'>
                     <p className='text-black text-[14px] font-semibold'>Узнать цену с выгодами</p>
                     <img className='mt-1' src={arrow} alt="rasm" />
                 </div>

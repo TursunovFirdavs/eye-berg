@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import car from '../assets/car.png'
 import sign from '../assets/sign.png'
 import arrow from '../assets/arrow.png'
 import { IoIosArrowForward } from "react-icons/io";
-import carMobile from '../assets/CarMobile.png'
 import sale from '../assets/sale.png'
 import check from '../assets/check.png'
 import tag from '../assets/tag.png'
@@ -13,10 +11,19 @@ import car2 from '../assets/car2.png'
 import car3 from '../assets/car3.png'
 import car4 from '../assets/car4.png'
 import car5 from '../assets/car5.png'
+import defaultCar from '../assets/DefaultCar.png'
+import blackCar from '../assets/blackCar.png'
+import whiteCar from '../assets/whiteCar.png'
+import greyCar from '../assets/greyCar.png'
+import { IoCheckmarkSharp } from "react-icons/io5";
+import discount from '../assets/Frame.png'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const CarInfo = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const[selected, setSelected] = useState(0)
 
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -51,12 +58,23 @@ const CarInfo = () => {
     ]
 
     const images = [car1, car2, car3, car4, car5]
+    const cars = [defaultCar, whiteCar, greyCar, blackCar]
+    const navigate = useNavigate()
 
     return (
         <div className='bg-secondary-dark md:py-[80px] py-10'>
             <div className='container'>
                 <div className='md:flex gap-[23px]'>
-                    <img src={windowWidth > 770 ? car : carMobile} alt="" />
+                    <div className='md:flex flex-row-reverse items-center relative'>
+                    <img className='min-w-[345px]' src={cars[selected]}/>
+                    <div className='flex md:flex-col justify-center mt-[10px] md:mt-0 gap-[10px]'>
+                        <p onClick={() => setSelected(0)} className='w-[30px] h-[30px] rounded-full bg-[#B0A798] border flex items-center justify-center'>{selected === 0 && <IoCheckmarkSharp />}</p>
+                        <p onClick={() => setSelected(1)} className='w-[30px] h-[30px] rounded-full bg-[#E6E7E8] border flex items-center justify-center'>{selected === 1 && <IoCheckmarkSharp className='text-gray-400' />}</p>
+                        <p onClick={() => setSelected(2)} className='w-[30px] h-[30px] rounded-full bg-[#A2A4AB] border flex items-center justify-center'>{selected === 2 && <IoCheckmarkSharp />}</p>
+                        <p onClick={() => setSelected(3)} className='w-[30px] h-[30px] rounded-full bg-[#212329] border flex items-center justify-center'>{selected === 3 && <IoCheckmarkSharp />}</p>
+                    </div>
+                    <img className='absolute md:top-2 top-0 md:right-10 right-0 w-[100px] md:w-[154px]' src={discount} alt="" />
+                    </div>
                     <div className='flex-1 mt-6 md:mt-0'>
                         <p className='text-main-yellow md:text-[20px] text-[14px]'>Только в АВТОРУСЬ!</p>
                         <p className='md:text-[40px] text-[28px] font-bold'>TANK 500</p>
@@ -66,7 +84,7 @@ const CarInfo = () => {
                             <p>Ограниченное предложение!</p>
                             <img src={sign} alt="" />
                         </div>
-                        <div className='border mt-[10px] cursor-pointer border-main-yellow rounded-[10px] flex items-center justify-center py-4 w-full bg-main-yellow text-black '>
+                        <div onClick={() => navigate('/offer')} className='border mt-[10px] cursor-pointer border-main-yellow rounded-[10px] flex items-center justify-center py-4 w-full bg-main-yellow text-black '>
                             <p className='text-[14px] font-semibold'>Узнать стоимость по акции</p>
                             <img src={arrow} alt="" />
                         </div>

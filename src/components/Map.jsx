@@ -5,6 +5,7 @@ import image from '../assets/image.png'
 import phone from '../assets/phone.png'
 import speedometer from '../assets/speedometer.png'
 import settings from '../assets/settings.png'
+import { useNavigate } from 'react-router-dom'
 
 const Map = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -20,6 +21,7 @@ const Map = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    const navigate = useNavigate()
     return (
         <div className='container'>
             <img src={windowWidth > 770 ? map1 : map2} alt="" />
@@ -44,7 +46,7 @@ const Map = () => {
                             <p className='text-[20px] font-semibold'>+7 (999) 999-99-99</p>
                             <img src={image} alt="rasm" />
                         </div>
-                        <div className='bg-main-yellow md:w-[207px] w-full  py-[11px] flex items-center justify-center gap-2 text-black rounded-[8px]'>
+                        <div onClick={() => navigate('/offer')} className='bg-main-yellow cursor-pointer md:w-[207px] w-full  py-[11px] flex items-center justify-center gap-2 text-black rounded-[8px]'>
                             <img src={phone} alt="rasm" />
                             <p className='text-[14px] font-semibold'>Заказать звонок</p>
                         </div>
