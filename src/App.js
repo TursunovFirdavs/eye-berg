@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Pointer from './components/Pointer';
 import SecondaryHero from './components/Secondary-hero';
 import Map from './components/Map';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <SecondaryHero/>
       <Client/>
       <Map/>
+      <Footer/>
     </div>
   );
 }

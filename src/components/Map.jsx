@@ -49,7 +49,7 @@ const Map = () => {
                             <p className='text-[14px] font-semibold'>Заказать звонок</p>
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-auto items-center mt-9 md:gap-10 gap-6'>
+                    <div className='flex items-center mt-9 md:gap-10 gap-6'>
                         <div className='flex items-center gap-2'>
                             <img src={settings} alt="rasm" />
                             <p className='text-[14px] font-semibold'>Записаться на сервис</p>

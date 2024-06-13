@@ -13,7 +13,7 @@ const Client = () => {
                 </div>
             </div>
             <div className='flex gap-5 items-center pr-10'>
-                <img className='w-[90px]' src={user} alt="" />
+                <img className='w-[90px] md:w-[140px]' src={user} alt="" />
                 <div>
                     <p className='md:text-[24px] text-[18px] font-bold'>Татьяна Санникова</p>
                     <p className='w-[170px] text-[14px] text-text-gray'>Отдел корпоративных продаж АВТОРУСЬ</p>
