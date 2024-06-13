@@ -90,7 +90,7 @@ const CarInfo = () => {
                 </div>
                 <div className='flex gap-[10px] justify-between container overflow-auto'>
                     {images.map((item, i) => (
-                        <img className='w-[120px] md:w-[200px]' key={i} src={item} alt="" />
+                        <img className='w-[120px] md:w-[240px]' key={i} src={item} alt="" />
                     ))}
                 </div>
             </div>
