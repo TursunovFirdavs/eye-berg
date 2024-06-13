@@ -4,6 +4,7 @@ import tag from '../assets/tag.png'
 import gift from '../assets/gift.png'
 import arrow from '../assets/arrow.png'
 import { IoIosArrowForward } from "react-icons/io";
+import newCar from '../assets/new.png'
 
 
 const Equipment = () => {
@@ -32,7 +33,7 @@ const Equipment = () => {
                     <div className='flex-1'>
                         <p className='text-[30px] font-bold'>TANK 300</p>
                         <p className='text-[18px] text-text-gray md:mb-8 mb-6'>2.0 л. Бензин, Полный, Автоматическая</p>
-                        <p className='text-[24px] font-bold'>3 649 000 ₽</p>
+                        <p className='text-[24px] font-bold line-through'>3 649 000 ₽</p>
                         <div className='md:flex gap-6 mt-6 mb-10 md:mb-0'>
                             <div className='flex items-start gap-[10px]'>
                                 <img src={tag} alt="" />
@@ -56,6 +57,19 @@ const Equipment = () => {
                     </div>
                 </div>
                 ))}
+            </div>
+            <div className='flex items-center justify-center'>
+                <button className='md:w-[167px] w-full py-4 border border-gray-500 rounded-[8px] mt-10 md:mb-[140px] mb-[80px]'>Загрузить еще</button>
+            </div>
+            <div className='md:flex items-center gap-10'>
+                <img src={newCar} alt="" />
+                <div>
+                    <p className='font-bold md:text-[40px] text-[28px] md:leading-[40px] leading-[30px] mt-5 md:mt-0 md:mb-10 mb-5'>ОБМЕН ПО TRADE-IN НА ВЫГОДНЫХ УСЛОВИЯХ</p>
+                    <div className='bg-main-yellow rounded-[8px] md:w-[207px] py-4 flex items-center gap-2 justify-center text-main-dark font-semibold'>
+                        <p>Отправить заявку</p>
+                        <img className='mt-1' src={arrow} alt="" />
+                    </div>
+                </div>
             </div>
         </div>
     )

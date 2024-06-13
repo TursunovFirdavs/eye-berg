@@ -4,6 +4,7 @@ import Equipment from './components/Equipment';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Pointer from './components/Pointer';
+import SecondaryHero from './components/Secondary-hero';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Pointer/>
       <CarInfo/>
       <Equipment/>
+      <SecondaryHero/>
     </div>
   );
 }
